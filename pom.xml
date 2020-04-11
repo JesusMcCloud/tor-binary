@@ -5,7 +5,7 @@
 
     <groupId>com.github.JesusMcCloud</groupId>
     <artifactId>tor-binary</artifactId>
-    <version>0.4.2.6</version>
+    <version>0.4.2.7</version>
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
@@ -15,7 +15,7 @@
 
         requirement are: gpg in path
         -->
-        <torbrowser.version>9.0.5</torbrowser.version>
+        <torbrowser.version>9.0.9</torbrowser.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.remote-resource.directory>${project.build.directory}/maven-shared-archive-resources</project.remote-resource.directory>
     </properties>
