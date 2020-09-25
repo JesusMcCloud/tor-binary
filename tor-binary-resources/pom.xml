@@ -45,6 +45,14 @@
                                         src="https://dist.torproject.org/torbrowser/${torbrowser.version}/tor-browser-linux64-${torbrowser.version}_en-US.tar.xz"
                                         dest="${project.source.directory}/tor-browser-linux64-${torbrowser.version}_en-US.tar.xz"
                                         skipexisting="true"/>
+                                    <get
+                                        src="https://sourceforge.net/projects/tor-browser-ports/files/${torbrowser.version}-armhf/tor-browser-linux-armhf-${torbrowser.version}_en-US.tar.xz/download"
+                                        dest="${project.source.directory}/tor-browser-linux-armhf-${torbrowser.version}_en-US.tar.xz"
+                                        skipexisting="true"/>
+                                    <get
+                                        src="https://sourceforge.net/projects/tor-browser-ports/files/${torbrowser.version}-arm64/tor-browser-linux-arm64-${torbrowser.version}_en-US.tar.xz/download"
+                                        dest="${project.source.directory}/tor-browser-linux-arm64-${torbrowser.version}_en-US.tar.xz"
+                                        skipexisting="true"/>
                                 </parallel>
 
                                 <copy todir="${project.source.directory}">
@@ -57,6 +65,8 @@
                                         <checksum algorithm="SHA-512" file="${project.source.directory}/TorBrowser-${torbrowser.version}-osx64_en-US.dmg" />
                                         <checksum algorithm="SHA-512" file="${project.source.directory}/tor-browser-linux32-${torbrowser.version}_en-US.tar.xz" />
                                         <checksum algorithm="SHA-512" file="${project.source.directory}/tor-browser-linux64-${torbrowser.version}_en-US.tar.xz" />
+                                        <checksum algorithm="SHA-256" file="${project.source.directory}/tor-browser-linux-armhf-${torbrowser.version}_en-US.tar.xz" />
+                                        <checksum algorithm="SHA-256" file="${project.source.directory}/tor-browser-linux-arm64-${torbrowser.version}_en-US.tar.xz" />
                                     </and>
                                 </condition>
                                 <fail unless="checksumsMatch" />
