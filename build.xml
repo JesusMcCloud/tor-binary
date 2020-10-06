@@ -2,7 +2,7 @@
 <project name="tor-binaries" default="checkSignatures">
 
     <property name="project.source.directory" value="tmp"/>
-    <property name="torbrowser.version" value="9.5.3"/>
+    <property name="torbrowser.version" value="9.5.4"/>
     <target name="checkSignatures">
 
         <mkdir dir="${project.source.directory}"/>
@@ -59,7 +59,7 @@
             </exec>
         </parallel>
 
-        <checksum algorithm="SHA-512" todir="tor-binary-resources/checksums">
+        <checksum algorithm="SHA-256" todir="tor-binary-resources/checksums">
             <fileset dir="${project.source.directory}">
                 <exclude name="*.asc"/>
             </fileset>
